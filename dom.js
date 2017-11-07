@@ -16,8 +16,23 @@
   var createTodoNode = function(todo) {
     var todoNode = document.createElement('li');
     // you will need to use addEventListener
-
+    var input=document.createElement("INPUT");
+        input.setAttribute("type","checkbox");
+        todoNode.appendChild(input);
+        input.addEventListener('click',function(event){
+          var newState=todoFunctions.markTodo(state,todo.id);
+          update(newState);
+        });
     // add span holding description
+     if(todo.done){
+       input.checked=true;
+     }else{
+       input.checked=false;
+
+     }
+      var span = document.createElement("span");
+      span.textContent = todo.description;
+      todoNode.appendChild(span);
 
     // this adds the delete button
     var deleteButtonNode = document.createElement('button');

@@ -38,3 +38,21 @@ test("test for deleting in deleteTodo",function(t){
   t.notEqual(actual,expected,"your todo was deleted from the an existing array");
   t.end();
 });
+
+test("Check for the markTodo function",function(t){
+var todoArray=[{"id":1, "description":"li1", "done": false},{"id":2, "description":"li2", "done": false},{"id":3,"description":"hello","done": false}];
+var actual=logic.markTodo(todoArray,2);
+var expected=[{"id":1, "description":"li1", "done": false},{"id":2, "description":"li2", "done": true},{"id":3,"description":"hello","done": false}];
+t.deepEqual(actual,expected,"It should toggle the done state of the given todo item");
+t.end();
+
+});
+
+test("Check for the markTodo toggled twice function",function(t){
+var todoArray=[{"id":1, "description":"li1", "done": false},{"id":2, "description":"li2", "done": false},{"id":3,"description":"hello","done": false}];
+var actual=logic.markTodo(logic.markTodo(todoArray,2),2);
+var expected=[{"id":1, "description":"li1", "done": false},{"id":2, "description":"li2", "done": false},{"id":3,"description":"hello","done": false}];
+t.deepEqual(actual,expected,"It should toggle the done state of the given todo item");
+t.end();
+
+});

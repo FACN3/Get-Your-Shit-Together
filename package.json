@@ -1,0 +1,27 @@
+{
+  "name": "get-your-shit-together",
+  "version": "1.0.0",
+  "description": "Organize your life and figure out what you need to do next.",
+  "main": "dom.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN3/Get-Your-Shit-Together.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN3/Get-Your-Shit-Together/issues"
+  },
+  "homepage": "https://github.com/FACN3/Get-Your-Shit-Together#readme",
+  "devDependencies": {
+    "nyc": "^11.3.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.8.0"
+  }
+}

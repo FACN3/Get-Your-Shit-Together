@@ -7,7 +7,7 @@
   var addTodoForm = document.getElementById('add-todo');
 
   var state = [
-  //  { id: -3, description: 'first todo' },
+    { id: -3, description: 'first todo' },
   //  { id: -2, description: 'second todo' },
   //  { id: -1, description: 'third todo' },
   ]; // this is our initial todoList
@@ -21,16 +21,17 @@
         input.setAttribute("type","checkbox");
         todoNode.appendChild(input);
         input.addEventListener('click',function(event){
-          var newState=todoFunctions.markTodo(state,todo.id);
-          update(newState);
+          var newState = todoFunctions.markTodo(state,todo.id);
+        //  update(newState);
+          console.log(newState);
         });
+     //if(todo.done){
+    //   input.checked=true;
+    // }else{
+    //   input.checked=false;
+    // }
+    todo.done ? input.checked = true : input.checked = false;
     // add span holding description
-     if(todo.done){
-       input.checked=true;
-     }else{
-       input.checked=false;
-
-     }
       var span = document.createElement("span");
       span.textContent = todo.description;
       todoNode.appendChild(span);

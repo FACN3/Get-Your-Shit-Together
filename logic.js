@@ -47,16 +47,17 @@ var todoFunctions = {
     // in the new todo array, all elements will remain unchanged except the one with id: idToMark
     // this element will have its done value toggled
     // hint: array.map
-  //  return todos.map(function(object){
-  //     if(object["id"]==idToMark){
-  //      object["done"]= !object["done"];
-  //     }
-  //     return object;
-  //   });
+  /*  return todos.map(function(object){
+      if(object["id"]==idToMark){
+       object["done"]= !object["done"];
+      }
+       return object;
+   });*/
   //sophisticated version
+  console.log(todos);
   return todos.map(function(object){
-    object["done"]=Object.values(object)[0]== idToMark ? !object["done"] : object["done"] ;
-     return object;
+    object["done"] = Object.values(object)[2] == idToMark ?  !object["done"] : object["done"];
+    return object;
    });
   },
   sortTodos: function(todos, sortFunction) {

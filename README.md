@@ -12,12 +12,16 @@ This repository  contains the source files code for a simple Javascript todo app
  1. [style.css](https://github.com/FACN3/Get-Your-Shit-Together/blob/master/style.css): Contains the css styles.
 
 ## Contributers :octocat:
+
+
   1. [Mynah Marie](https://github.com/MynahMarie)       :musical_note:
   1. [Hassan Saad](https://github.com/ghassanmas)       :sunglasses:
   1. [Ghassan Maslamani](https://github.com/hasansaad1) :alien:
 
 
 ## Testing Strategy: :white_check_mark:
+
+
   As we have mentioned before we have used the [tape](https://www.npmjs.com/package/tape) library to tests the logic functions, one of the challenges we faced was about how to test if an array of objects equals other array of objects we found that this could be done using ''deepEqual'' as shown below:
   ```javascript
 test("tests for addTodo",function(t){
@@ -30,6 +34,21 @@ test("tests for addTodo",function(t){
 ```
 [Check here in the logic.tests.js file](https://github.com/FACN3/Get-Your-Shit-Together/blob/master/tests/logic.tests.js#L9-L15)
 
-## Coding Shortcuts:
 
-  
+## Coding Shortcuts :turtle:
+
+  We used a code shortcuts while coding for the project one of them is using the [ternary operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator). check the following example:
+
+  ```javascript
+  todo.done ? input.checked = true : input.checked = false;
+```
+Which is equivalent to:
+
+```javascript
+if(todo.done){
+  input.checked=true;
+}else{
+  input.checked=false;
+}
+```
+[show in the mode.js file](https://github.com/FACN3/Get-Your-Shit-Together/blob/master/dom.js#L30-L35)

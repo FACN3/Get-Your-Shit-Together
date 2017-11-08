@@ -21,9 +21,11 @@
         input.setAttribute("type","checkbox");
         todoNode.appendChild(input);
         input.addEventListener('click',function(event){
+
           var newState = todoFunctions.markTodo(state,todo.id);
         //  update(newState);
           console.log(newState);
+
         });
      //if(todo.done){
     //   input.checked=true;

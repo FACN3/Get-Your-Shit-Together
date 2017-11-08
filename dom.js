@@ -7,15 +7,16 @@
   var addTodoForm = document.getElementById('add-todo');
 
   var state = [
-    { id: -3, description: 'first todo' },
-    { id: -2, description: 'second todo' },
-    { id: -1, description: 'third todo' },
+  //  { id: -3, description: 'first todo' },
+  //  { id: -2, description: 'second todo' },
+  //  { id: -1, description: 'third todo' },
   ]; // this is our initial todoList
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
     var todoNode = document.createElement('li');
     // you will need to use addEventListener
+    // Add markTodo button
     var input=document.createElement("INPUT");
         input.setAttribute("type","checkbox");
         todoNode.appendChild(input);
@@ -42,10 +43,6 @@
     });
     todoNode.appendChild(deleteButtonNode);
 
-    // add markTodo button
-
-    // add classes for css
-
     return todoNode;
   };
 
@@ -55,11 +52,11 @@
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit
       // what does event.preventDefault do?
       // what is inside event.target?
-
-      var description = '?'; // event.target ....
-
+      event.preventDefault();
+      var description = document.getElementById("add-todo")[0].value; // event.target ....
+      var obj={"description": description , done: false};
       // hint: todoFunctions.addTodo
-      var newState = []; // ?? change this!
+      var newState = todoFunctions.addTodo(state, obj); // ?? change this!
       update(newState);
     });
   }

@@ -13,12 +13,14 @@ This repository  contains the source files code for a simple Javascript todo app
 
 ## Contributers :octocat:
 
+
   1. [Mynah Marie](https://github.com/MynahMarie)       :musical_note:
   1. [Hassan Saad](https://github.com/ghassanmas)       :sunglasses:
   1. [Ghassan Maslamani](https://github.com/hasansaad1) :alien:
 
 
 ## Testing Strategy: :white_check_mark:
+
 
   As we have mentioned before we have used the [tape](https://www.npmjs.com/package/tape) library to tests the logic functions, one of the challenges we faced was about how to test if an array of objects equals other array of objects we found that this could be done using ''deepEqual'' as shown below:
   ```javascript
@@ -31,6 +33,7 @@ test("tests for addTodo",function(t){
 });
 ```
 [Check here in the logic.tests.js file](https://github.com/FACN3/Get-Your-Shit-Together/blob/master/tests/logic.tests.js#L9-L15)
+
 
 ## Coding Shortcuts :turtle:
 

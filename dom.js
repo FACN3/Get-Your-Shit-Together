@@ -44,6 +44,12 @@
       var newState = todoFunctions.deleteTodo(state, todo.id);
       update(newState);
     });
+    var deleteButtonImg = document.createElement('IMG');
+    deleteButtonImg.setAttribute("src", "images/trashRed.png");
+    deleteButtonImg.setAttribute("width", "100%");
+    deleteButtonImg.setAttribute("height", "80%");
+    deleteButtonImg.setAttribute("alt", "delete icon");
+    deleteButtonNode.appendChild(deleteButtonImg);
     todoNode.appendChild(deleteButtonNode);
 
     return todoNode;

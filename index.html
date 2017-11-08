@@ -7,20 +7,30 @@
 
   </head>
   <body>
+    <header>
+      <h1 class="title">The Amazing Organizer</h1>
+      <h2 class="tagline">Enter your tasks and submit them by priority order!</h2>
+    </header>
     <div class="all">
     <div id = "todo-container" class = "todo_con">
-        <!-- <ul>
-        </ul> -->
+      <!---  <ul>
+      </ul> --->
     </div>
+    <div class="form">
     <form id="add-todo">
-      <input type="text" name="description" value="">
-      <select id="priority">
+      <div class="description">
+      <input class="form__input" type="text" name="description" value="" size=40>
+    </div>
+    <div class="buttons__form">
+      <select id="priority" class="buttons__form--submit">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
         <option value="4" selected>Priority</option>
-      <input type="submit" name="" value="Submit">
+      <input class="buttons__form--submit" type="submit" name="" value="Submit">
+    </div>
     </form>
+  </div>
   </div>
   </body>
   <script type="text/javascript" src = "./logic.js"></script>

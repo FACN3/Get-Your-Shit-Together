@@ -47,7 +47,7 @@
     var deleteButtonImg = document.createElement('IMG');
     deleteButtonImg.setAttribute("src", "images/trashRed.png");
     deleteButtonImg.setAttribute("width", "100%");
-    deleteButtonImg.setAttribute("height", "80%");
+    deleteButtonImg.setAttribute("height", "100%");
     deleteButtonImg.setAttribute("alt", "delete icon");
     deleteButtonNode.appendChild(deleteButtonImg);
     todoNode.appendChild(deleteButtonNode);

@@ -22,23 +22,18 @@
         todoNode.appendChild(input);
         input.addEventListener('click',function(event){
 
-
-          if(todo.done){
-            input.checked=true;
-          }else{
-            input.checked=false;
-
-          }
-          var newState=todoFunctions.markTodo(state,todo.id);
+          var newState = todoFunctions.markTodo(state,todo.id);
+        //  update(newState);
+          console.log(newState);
 
         });
+     //if(todo.done){
+    //   input.checked=true;
+    // }else{
+    //   input.checked=false;
+    // }
+    todo.done ? input.checked = true : input.checked = false;
     // add span holding description
-     if(todo.done){
-       input.checked=true;
-     }else{
-       input.checked=false;
-
-     }
       var span = document.createElement("span");
       span.textContent = todo.description;
       todoNode.appendChild(span);
@@ -62,10 +57,17 @@
       // what is inside event.target?
       event.preventDefault();
       var description = document.getElementById("add-todo")[0].value; // event.target ....
-      var obj={"description": description , done: false};
+      var priority = document.getElementById("priority").value;
+      var newTodo = {"description": description , done: false, "priority": priority};
       // hint: todoFunctions.addTodo
-      var newState = todoFunctions.addTodo(state, obj); // ?? change this!
+
+      var newState = todoFunctions.addTodo(state, newTodo);
+      newState = todoFunctions.sortTodos(newState, function(a,b) {
+        return a.priority -  b.priority;
+      });
+      document.getElementById("add-todo")[0].value = "";
       update(newState);
+      console.log(newState);
     });
   }
 

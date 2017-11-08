@@ -27,6 +27,16 @@ header {
   margin-bottom: 20vh;
 }
 
+.title {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 45px;
+}
+
+.tagline {
+  font-family: 'Philosopher', sans-serif;
+  font-size: 30px;
+}
+
 /* Form */
 
 .form {
@@ -49,15 +59,18 @@ header {
 li {
 /*  margin: auto;*/
   width:100%;
-  font-size: 25px;
+  font-size: 28px;
   /*text-align: center;*/
-  margin: 5% 10% 5% 10%;
+  margin: 2% 10% 2% 10%;
   display: block;
+  font-family: 'Indie Flower', cursive;
 }
 
 ul {
   width: 100%;
   list-style-type: none;
+  margin-left: 10%;
+  padding-bottom: 3%;
 }
 
 span {
@@ -72,7 +85,7 @@ input {
 input[type=checkbox] {
 /*width: 15vw;
 height: 15vh;*/
-transform: scale(4);
+transform: scale(3);
 padding-right: 5px;
 background: #FFF;
 position: relative;
@@ -95,5 +108,14 @@ border-style: none;
 }
 
 .buttons__form--submit {
-  padding: 0 3.5% 0 3.5;
+  background-color: #23a5bc;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
 }

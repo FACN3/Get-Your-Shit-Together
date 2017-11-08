@@ -7,7 +7,7 @@
   var addTodoForm = document.getElementById('add-todo');
 
   var state = [
-    { id: -3, description: 'first todo' },
+  //  { id: -3, description: 'first todo' },
   //  { id: -2, description: 'second todo' },
   //  { id: -1, description: 'third todo' },
   ]; // this is our initial todoList
@@ -55,10 +55,17 @@
       // what is inside event.target?
       event.preventDefault();
       var description = document.getElementById("add-todo")[0].value; // event.target ....
-      var obj={"description": description , done: false};
+      var priority = document.getElementById("priority").value;
+      var newTodo = {"description": description , done: false, "priority": priority};
       // hint: todoFunctions.addTodo
-      var newState = todoFunctions.addTodo(state, obj); // ?? change this!
+
+      var newState = todoFunctions.addTodo(state, newTodo);
+      newState = todoFunctions.sortTodos(newState, function(a,b) {
+        return a.priority -  b.priority;
+      });
+      document.getElementById("add-todo")[0].value = "";
       update(newState);
+      console.log(newState);
     });
   }
 

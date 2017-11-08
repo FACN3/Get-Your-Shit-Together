@@ -56,7 +56,7 @@ var todoFunctions = {
   //sophisticated version
   console.log(todos);
   return todos.map(function(object){
-    object["done"] = Object.values(object)[2] == idToMark ?  !object["done"] : object["done"];
+    object["done"] = Object.values(object)[3] == idToMark ?  !object["done"] : object["done"];
     return object;
    });
   },
@@ -65,8 +65,9 @@ var todoFunctions = {
     // should leave the input arguement todos unchanged (you can use cloneArrayOfObjects)
     // sortFunction will have same signature as the sort function in array.sort
     // hint: array.slice, array.sort
-    var newTodos = todoFunctions.cloneArrayOfObjects;
-    return newTodos.sort(todos, sortFunction);
+    var newTodos = todoFunctions.cloneArrayOfObjects(todos);
+    console.log(newTodos);
+    return newTodos.sort(sortFunction);
   },
 };
 

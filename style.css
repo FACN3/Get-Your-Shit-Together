@@ -1,15 +1,32 @@
+
+/* Mobile First */
+
+
+
+
+
+
+
+
+
+
+
 /* Background */
 
 body {
   background-color: lightblue;
-  background-image: url('images/notebook-paper-corrected.jpg');
+  background-image: url('images/bihsifa.jpg');
   background-size: cover;
 }
 
 /* General */
+
 .todo_con {
   width : 80%;
   margin: auto;
+  height: 285px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .all{
@@ -21,6 +38,7 @@ body {
 }
 
 /* Header */
+
 header {
   text-align: center;
   margin-top: 6vh;
@@ -35,6 +53,7 @@ header {
 .tagline {
   font-family: 'Philosopher', sans-serif;
   font-size: 30px;
+  padding-top: 3vh;
 }
 
 /* Form */
@@ -42,16 +61,14 @@ header {
 .form {
   display: block;
   text-align: center;
-  /*position: fixed;
-  bottom: 0;
-  margin-right:inherit;
-  margin-left:inherit;
-  float: center;*/
-
 }
 
 .form__input {
   font-size: 25px;
+}
+
+::placeholder {
+  font-family: 'Indie Flower', cursive;
 }
 
 /* List Display */
@@ -69,7 +86,7 @@ li {
 ul {
   width: 100%;
   list-style-type: none;
-  margin-left: 10%;
+  margin-left: -3.5%;
   padding-bottom: 3%;
 }
 
@@ -83,26 +100,25 @@ input {
 }
 
 input[type=checkbox] {
-/*width: 15vw;
-height: 15vh;*/
-transform: scale(3);
-padding-right: 5px;
-background: #FFF;
-position: relative;
-
+  /*width: 15vw;
+  height: 15vh;*/
+  transform: scale(3);
+  padding-right: 5%;
+  background: #FFF;
+  position: relative;
 }
 
 button {
-/*margin-right: 60%;*/
-/*float:right;
-/*padding-left: 2%;*/
-width: 5%;
-height: 6%;
-margin-bottom: 1%;
-border-style: none;
-/*top: 0.7rem;*/
-position: relative;
-/*margin-bottom: ;*/
+  width: 5%;
+  height: 6%;
+  margin-bottom: 1%;
+  border-style: none;
+  top: 0.4rem;
+  position: relative;
+  background-color: transparent;
+  float: right;
+  margin-right: 20%;
+  /*margin-bottom: ;*/
 }
 
 .buttons__form {

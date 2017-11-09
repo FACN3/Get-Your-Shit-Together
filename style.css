@@ -12,7 +12,7 @@
 .todosContainer {
   width : 80%;
   margin: auto;
-  height: 400px;
+  height: 200px;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -143,5 +143,8 @@ button {
   }
   .header__tagline {
     padding-left: 13%;
+  }
+  .todosContainer {
+    height: 400px;
   }
 }

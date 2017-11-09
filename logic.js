@@ -57,7 +57,8 @@ var todoFunctions = {
   /*
   console.log(todos);
   return todos.map(function(object){
-    object["done"] = Object.values(object)[3] == idToMark ?  !object["done"] : object["done"];
+    //object["done"] = Object.values(object)[3] == idToMark ?  !object["done"] : object["done"];
+    object["done"] = object.id == idToMark ?  !object["done"] : object["done"];
     return object;
   });*/
   },

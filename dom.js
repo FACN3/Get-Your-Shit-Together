@@ -54,14 +54,16 @@
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit
-
+      
       event.preventDefault();
       var description = document.getElementById("add-todo")[0].value;
       var priority = document.getElementById("priority").value;
       var newTodo = {"description": description , done: false, "priority": priority};
 
       var newState = todoFunctions.addTodo(state, newTodo);
-      newState = todoFunctions.sortTodos(newState, todoFunctions.sortFun;
+      newState = todoFunctions.sortTodos(newState, function(a,b) {
+        return a.priority -  b.priority;
+      });
 
       document.getElementById("add-todo")[0].value = "";
       update(newState);

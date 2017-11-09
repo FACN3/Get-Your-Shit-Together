@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "tape ./tests/*.tests.js | tap-spec"
+    "test": "tape ./tests/*.tests.js | tap-spec",
+    "test1": "nyc node ./tests/*.tests.js"
   },
   "repository": {
     "type": "git",

@@ -56,3 +56,14 @@ t.deepEqual(actual,expected,"It should toggle the done state of the given todo i
 t.end();
 
 });
+
+test("Check for the sortTodosTodo toggled twice function",function(t){
+var todoArray=[{ "description":"li1","priority":2, "done": false,"id":1},{ "description":"li2","priority":3, "done": false,"id":2},{"description":"hello","priority":1,"done": false,"id":3}];
+var actual=logic.sortTodos(todoArray,function(a,b) {
+  return a.priority -  b.priority;
+});
+var expected=[{"description":"hello","priority":1,"done": false,"id":3},{ "description":"li1","priority":2, "done": false,"id":1},{ "description":"li2","priority":3, "done": false,"id":2}];
+t.deepEqual(actual,expected,"It should sort according to the priority");
+t.end();
+
+});

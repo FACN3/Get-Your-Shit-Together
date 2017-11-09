@@ -54,8 +54,7 @@
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit
-      // what does event.preventDefault do?
-      // what is inside event.target?
+
       event.preventDefault();
       var description = document.getElementById("add-todo")[0].value;
       var priority = document.getElementById("priority").value;

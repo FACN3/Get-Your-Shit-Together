@@ -6,11 +6,7 @@
   var container = document.getElementById('todo-container');
   var addTodoForm = document.getElementById('add-todo');
 
-  var state = [
-  //  { id: -3, description: 'first todo' },
-  //  { id: -2, description: 'second todo' },
-  //  { id: -1, description: 'third todo' },
-  ]; // this is our initial todoList
+  var state = []; // this is our initial todoList
 
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
@@ -18,23 +14,19 @@
     todoNode.setAttribute("class","todoList__element");
     // you will need to use addEventListener
     // Add markTodo button
-    var input=document.createElement("INPUT");
-        input.setAttribute("type","checkbox");
-        //input.setAttribute("class","todoList__input--checkbox")
-        todoNode.appendChild(input);
-        input.addEventListener('click',function(event){
+    var input = document.createElement("INPUT");
+    input.setAttribute("type","checkbox");
+    todoNode.appendChild(input);
 
-          var newState = todoFunctions.markTodo(state,todo.id);
-        //  update(newState);
-          console.log(newState);
-
-        });
+    input.addEventListener('click',function(event){
+      var newState = todoFunctions.markTodo(state,todo.id);
+    });
      //if(todo.done){
     //   input.checked=true;
     // }else{
     //   input.checked=false;
     // }
-    todo.done ? input.checked = true : input.checked = false;
+      todo.done ? input.checked = true : input.checked = false;
     // add span holding description
       var span = document.createElement("span");
       span.setAttribute("class","todoList__element__text")
@@ -52,7 +44,6 @@
     deleteButtonImg.setAttribute("width", "100%");
     deleteButtonImg.setAttribute("height", "100%");
     deleteButtonImg.setAttribute("alt", "delete icon");
-    //deleteButtonImg.setAttribute("class", "todoList__button--delete");
     deleteButtonNode.appendChild(deleteButtonImg);
     todoNode.appendChild(deleteButtonNode);
 
@@ -66,18 +57,17 @@
       // what does event.preventDefault do?
       // what is inside event.target?
       event.preventDefault();
-      var description = document.getElementById("add-todo")[0].value; // event.target ....
+      var description = document.getElementById("add-todo")[0].value;
       var priority = document.getElementById("priority").value;
       var newTodo = {"description": description , done: false, "priority": priority};
-      // hint: todoFunctions.addTodo
 
       var newState = todoFunctions.addTodo(state, newTodo);
       newState = todoFunctions.sortTodos(newState, function(a,b) {
         return a.priority -  b.priority;
       });
+
       document.getElementById("add-todo")[0].value = "";
       update(newState);
-      console.log(newState);
     });
   }
 

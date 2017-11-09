@@ -20,6 +20,8 @@
 
     input.addEventListener('click',function(event){
       var newState = todoFunctions.markTodo(state,todo.id);
+      span.style.textDecoration= input.checked && "line-through" || "none";
+      span.style.color= input.checked && "green" || "black";
     });
      //if(todo.done){
     //   input.checked=true;
@@ -54,7 +56,7 @@
   if (addTodoForm) {
     addTodoForm.addEventListener('submit', function(event) {
       // https://developer.mozilla.org/en-US/docs/Web/Events/submit
-      
+
       event.preventDefault();
       var description = document.getElementById("add-todo")[0].value;
       var priority = document.getElementById("priority").value;

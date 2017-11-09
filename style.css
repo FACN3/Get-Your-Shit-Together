@@ -68,7 +68,7 @@
   width:100%;
   font-size: 28px;
   /*text-align: center;*/
-  margin: 2% 10% 2% 10%;
+  margin: 5% 10% 5% 10%;
   display: block;
   font-family: 'Indie Flower', cursive;
 }
@@ -142,4 +142,5 @@ button {
     top: 0.5rem;
 
   }
+
 }

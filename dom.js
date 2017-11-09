@@ -15,10 +15,12 @@
   // This function takes a todo, it returns the DOM node representing that todo
   var createTodoNode = function(todo) {
     var todoNode = document.createElement('li');
+    todoNode.setAttribute("class","todoList__element");
     // you will need to use addEventListener
     // Add markTodo button
     var input=document.createElement("INPUT");
         input.setAttribute("type","checkbox");
+        //input.setAttribute("class","todoList__input--checkbox")
         todoNode.appendChild(input);
         input.addEventListener('click',function(event){
 
@@ -35,6 +37,7 @@
     todo.done ? input.checked = true : input.checked = false;
     // add span holding description
       var span = document.createElement("span");
+      span.setAttribute("class","todoList__element__text")
       span.textContent = todo.description;
       todoNode.appendChild(span);
 
@@ -49,6 +52,7 @@
     deleteButtonImg.setAttribute("width", "100%");
     deleteButtonImg.setAttribute("height", "100%");
     deleteButtonImg.setAttribute("alt", "delete icon");
+    //deleteButtonImg.setAttribute("class", "todoList__button--delete");
     deleteButtonNode.appendChild(deleteButtonImg);
     todoNode.appendChild(deleteButtonNode);
 
@@ -86,6 +90,7 @@
   // you do not need to change this function
   var renderState = function(state) {
     var todoListNode = document.createElement('ul');
+    todoListNode.setAttribute("class","todoList")
 
     state.forEach(function(todo) {
       todoListNode.appendChild(createTodoNode(todo));

@@ -1,7 +1,7 @@
 
 /* Background */
 
-body {
+.background {
   background-color: lightblue;
   background-image: url('images/bihsifa.jpg');
   background-size: cover;
@@ -9,7 +9,7 @@ body {
 
 /* General */
 
-.todo_con {
+.todosContainer {
   width : 80%;
   margin: auto;
   height: 285px;
@@ -17,7 +17,7 @@ body {
   overflow-x: hidden;
 }
 
-.all{
+.page{
   margin-left:  auto;
   margin-right: auto;
   /*padding-left: 40%;
@@ -27,18 +27,18 @@ body {
 
 /* Header */
 
-header {
+.header {
   text-align: center;
   margin-top: 6vh;
   margin-bottom: 20vh;
 }
 
-.title {
+.header__title {
   font-family: 'Philosopher', sans-serif;
   font-size: 45px;
 }
 
-.tagline {
+.header__tagline {
   font-family: 'Philosopher', sans-serif;
   font-size: 30px;
   padding-top: 3vh;
@@ -51,7 +51,7 @@ header {
   text-align: center;
 }
 
-.form__input {
+.form__description--input {
   font-size: 25px;
   width: 40%;
 }
@@ -62,7 +62,8 @@ header {
 
 /* List Display */
 
-li {
+/*li {*/
+.todoList__element {
 /*  margin: auto;*/
   width:100%;
   font-size: 28px;
@@ -72,14 +73,16 @@ li {
   font-family: 'Indie Flower', cursive;
 }
 
-ul {
+/*ul {*/
+.todoList {
   width: 100%;
   list-style-type: none;
   margin-left: -3.5%;
   padding-bottom: 3%;
 }
 
-span {
+/*span {*/
+.todoList__element__text {
   padding: 0 5% 0 5%
 }
 
@@ -89,6 +92,7 @@ input {
 }
 
 input[type=checkbox] {
+/*.todoList__input--checkbox[type=checkbox] {*/
   /*width: 15vw;
   height: 15vh;*/
   transform: scale(3);
@@ -98,6 +102,7 @@ input[type=checkbox] {
 }
 
 button {
+/*.todoList__button--delete {*/
   width: 5%;
   height: 6%;
   margin-bottom: 1%;
@@ -110,12 +115,12 @@ button {
   /*margin-bottom: ;*/
 }
 
-.buttons__form {
+.form__buttons {
   padding-top: 3.5%;
   padding-bottom: 3.5%;
 }
 
-.buttons__form--submit {
+.form__buttons--submit {
   background-color: #23a5bc;
     border: none;
     color: white;

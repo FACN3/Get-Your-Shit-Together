@@ -12,7 +12,7 @@
 .todosContainer {
   width : 80%;
   margin: auto;
-  height: 285px;
+  height: 175px;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -133,7 +133,9 @@ button {
     cursor: pointer;
 }
 
+
 /*mobile version*/
+
 @media only screen and (max-width: 500px) {
   input[type=checkbox] {
     transform: scale(1);

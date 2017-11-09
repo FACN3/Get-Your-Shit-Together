@@ -62,9 +62,7 @@
       var newTodo = {"description": description , done: false, "priority": priority};
 
       var newState = todoFunctions.addTodo(state, newTodo);
-      newState = todoFunctions.sortTodos(newState, function(a,b) {
-        return a.priority -  b.priority;
-      });
+      newState = todoFunctions.sortTodos(newState, todoFunctions.sortFun;
 
       document.getElementById("add-todo")[0].value = "";
       update(newState);

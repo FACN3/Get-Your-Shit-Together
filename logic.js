@@ -71,6 +71,10 @@ var todoFunctions = {
     console.log(newTodos);
     return newTodos.sort(sortFunction);
   },
+
+  sortFun:function(a,b) {
+    return a.priority -  b.priority;
+  }
 };
 
 

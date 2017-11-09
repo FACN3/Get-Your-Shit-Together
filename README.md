@@ -2,7 +2,9 @@
 
 This repository  contains the source files code for a simple Javascript todo app, we are going to discuss some of the technologies used in the project. Also consider that this app depends completely on the client side.
 
-
+ https://facn3.github.io/Get-Your-Shit-Together/
+ 
+ 
 ##  Project Files   :open_file_folder:
 
  1. [index.html](https://github.com/FACN3/Get-Your-Shit-Together/blob/master/index.html): Main the only html file which has the main html elements.

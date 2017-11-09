@@ -12,7 +12,7 @@
 .todosContainer {
   width : 80%;
   margin: auto;
-  height: 200px;
+  height: 400px;
   overflow-y: auto;
   overflow-x: hidden;
 }

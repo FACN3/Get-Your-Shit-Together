@@ -133,15 +133,16 @@ button {
     cursor: pointer;
 }
 
+
+/*mobile version*/
+
 @media only screen and (max-width: 500px) {
   input[type=checkbox] {
-    transform: scale(2);
+    transform: scale(1);
   }
   button {
-    width: 10%;
-    height: 12%;
+    width: 30px;
+    height: 20px;
     top: 0.5rem;
-
   }
-
 }
